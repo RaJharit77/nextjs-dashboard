@@ -7,7 +7,6 @@ import {
     fetchLatestInvoices,
     fetchCardData,
 } from '@/app/lib/data';
-import NavLinks from '../ui/dashboard/nav-links';
 
 
 export default async function Page() {
