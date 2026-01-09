@@ -20,6 +20,10 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
-      - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-      - run: pnpm run build
+      - name: Build Next.js app
+        env:
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+        run: pnpm run build
